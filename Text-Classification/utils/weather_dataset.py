@@ -22,6 +22,8 @@ class WeatherDataset(Dataset):
 if __name__ == "__main__":
     import pandas as pd
     sample_dataset = pd.read_csv("dataset/temp.csv")
+    sample_data = sample_dataset.values()
+
     print(sample_dataset.head())
     dataloader = DataLoader(sample_dataset, batch_size=5)
 
